@@ -1,0 +1,82 @@
+write a program to allow the user to enter a number, then show a menu:
+1- Convert from CM to Inch 
+2- Convert from Inch to CM
+3- Convert from M to Feet
+4- Convert from Feet to M
+5- Convert from Donum to Hectare
+6- Convert from Hectare to Donum
+7- Convert from Cels to Fah
+8- Convert from Fah to Cels
+then show the results based on user choice 
+
+
+
+
+
+package edu.zuj.oop.week2.lecture2;
+
+import java.util.Scanner;
+
+public class Homework {
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Please select what you want to convert:");
+        System.out.println("1- From CM to Inch");
+        System.out.println("2- From Inch to CM");
+        System.out.println("3- From M to Feet");
+        System.out.println("4- From Feet to M");
+        System.out.println("5- From Donum to Hectare");
+        System.out.println("6- From Hectare to Donum");
+        System.out.println("7- From Celsius to Fahrenheit");
+        System.out.println("8- From Fahrenheit to Celsius");
+
+        int ch = s.nextInt();
+
+        if (ch < 1 || ch > 8) {
+            System.out.println(
+                "Invalid choice, please select between 1 and 8.");
+
+        } else if (ch == 1) {
+            System.out.println("Please enter length in CM:");
+            double cm = s.nextDouble();
+            System.out.println(cm + " CM is: " + cm / 2.54 + " Inches");
+
+        } else if (ch == 2) {
+            System.out.println("Please enter length in Inches:");
+            double inch = s.nextDouble();
+            System.out.println(inch + " Inches is: " + inch * 2.54 + " CM");
+
+        } else if (ch == 3) {
+            System.out.println("Please enter length in Meters:");
+            double m = s.nextDouble();
+            System.out.println(m + " M is: " + m * 3.281 + " Feet");
+
+        } else if (ch == 4) {
+            System.out.println("Please enter length in Feet:");
+            double f = s.nextDouble();
+            System.out.println(f + " Feet is: " + f / 3.281 + " Meters");
+
+        } else if (ch == 5) {
+            System.out.println("Please enter area in Donums:");
+            double d = s.nextDouble();
+            System.out.println(d + " Donums is: " + d / 10 + " Hectares");
+
+        } else if (ch == 6) {
+            System.out.println("Please enter area in Hectares:");
+            double h = s.nextDouble();
+            System.out.println(h + " Hectares is: " + h * 10 + " Donums");
+
+        } else if (ch == 7) {
+            System.out.println("Please enter temperature in Celsius:");
+            double c = s.nextDouble();
+            System.out.println(c + " Celsius is: " + ((c * 9 / 5) + 32) + " Fahrenheit");
+
+        } else if (ch == 8) {
+            System.out.println("Please enter temperature in Fahrenheit:");
+            double fa = s.nextDouble();
+            System.out.println(fa + " Fahrenheit is: " + ((fa - 32) * 5 / 9) + " Celsius");
+        }
+    }
+}
