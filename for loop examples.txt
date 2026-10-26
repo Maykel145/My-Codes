@@ -1,0 +1,179 @@
+1- write a program that prints the odd numbers from 1-n
+2- write a program that prints the primary numbers from 1-n
+3- write a program that prints a horizontal line of n stars 
+4- write a program that prints a square of n stars 
+5- write a program that prints a triangle of n stars 
+6- write a program that prints a reverse triangle of n stars 
+7- write a program that prints a pyramid of n stars 
+8- write a program that prints an oval of n stars
+
+================================================================
+1-  write a program that prints the odd numbers from 1-n : 
+
+package edu.zuj.oop.week3.lecture1;
+import java.util.Scanner;
+public class Homework2 {
+   public static void main (String[]args) {
+      Scanner s = new Scanner (System.in);
+      System.out.println("Enter a number: ");
+      int n=s.nextInt();
+      for (int i=0; i<n; i++) {
+          if (i % 2 != 0) {
+             System.out.print(i + " ");
+          }
+      }
+   }
+}
+
+==================================================================
+2- write a program that prints the primary numbers from 1-n :
+
+package edu.zuj.oop.week3.lecture1;
+import java.util.Scanner;
+public class Homework2 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n = s.nextInt();
+        for (int i = 2; i <= n; i++) {
+            int count = 0;
+            for (int j = 1; j <= i; j++) {
+                if (i % j == 0) {
+                    count++;
+                }
+            }
+
+            if (count == 2) {
+                System.out.print(i + " ");
+            }
+        }
+
+    }
+}
+
+==================================================================
+3- write a program that prints a horizontal line of n stars :
+
+package edu.zuj.oop.week3.lecture1;
+import java.util.Scanner;
+public class Homework2 {
+   public static void main (String[]args) {
+      Scanner s = new Scanner (System.in);
+      System.out.println("Enter a number: ");
+      int n=s.nextInt();
+      for (int i=0; i<n; i++) {
+          System.out.println(n"*");
+      }
+   }
+}
+
+==================================================================
+4- write a program that prints a square of n stars :
+
+package edu.zuj.oop.week3.lecture1;
+import java.util.Scanner;
+public class Homework2 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n = s.nextInt();
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+====================================================================
+5- write a program that prints a triangle of n stars :
+
+
+package edu.zuj.oop.week3.lecture1;
+import java.util.Scanner;
+public class Homework2 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n = s.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+======================================================================
+6- write a program that prints a reverse triangle of n stars :
+
+
+package edu.zuj.oop.week3.lecture1;
+import java.util.Scanner;
+public class Homework2 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n = s.nextInt();
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+========================================================================
+7- write a program that prints a pyramid of n stars :
+
+import java.util.Scanner;
+public class Homework2 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n = s.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+===========================================================================
+8- write a program that prints an oval of n stars :
+
+import java.util.Scanner;
+public class Homework2 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n = s.nextInt();
+        if (n % 2 == 0) {
+            n++;
+        }
+        for (int i = 1; i <= n; i++) {
+            int stars;
+            if (i <= n / 2 + 1) {
+                stars = 2 * i - 1;
+            } else {
+                stars = 2 * (n - i) + 1;
+            }
+            for (int j = 1; j <= (n - stars) / 2; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= stars; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
