@@ -1,47 +1,45 @@
+Write a program that reads n numbers from the user, then prints:
+-Min
+-Max
+-Sum
+-Avg
+Then reprint the array elements:
+
+
 
 package edu.zuj.oop.week3.lecture2;
 import java.util.Scanner;
-
-public class Test3 {
+public class Main {
     public static void main(String[] args) {
-
         Scanner s = new Scanner(System.in);
-
-        int a[] = new int[3];
-
+        System.out.println("Enter number of items:");
+        int n = s.nextInt();
+        int a[] = new int[n];
         for (int i = 0; i < a.length; i++) {
             System.out.println("Enter value " + (i + 1) + ":");
             a[i] = s.nextInt();
         }
-
         int Min = a[0];
         int Max = a[0];
         int Sum = 0;
-
         for (int i = 0; i < a.length; i++) {
-
             if (a[i] < Min) {
                 Min = a[i];
             }
-
             if (a[i] > Max) {
                 Max = a[i];
             }
-
             Sum += a[i];
         }
-
-        double Average = (double) Sum / a.length;
-
+        double Average = (double) Sum / a.length
         System.out.println("Min = " + Min);
         System.out.println("Max = " + Max);
         System.out.println("Sum = " + Sum);
         System.out.println("Average = " + Average);
-
         System.out.println("Array elements:");
-
         for (int i = 0; i < a.length; i++) {
             System.out.println(a[i]);
         }
     }
 }
+
